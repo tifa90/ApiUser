@@ -83,6 +83,9 @@ public class Utilisateur implements Serializable{
 		this.gender = gender;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return " "+iduser + " " +userName + " " +birthdate + " " + country + " " + phone + " " + gender ;
+	}
 
 }
