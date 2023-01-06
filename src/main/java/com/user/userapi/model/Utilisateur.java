@@ -22,7 +22,7 @@ public class Utilisateur implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long iduser;
+	private int iduser;
 	private String userName;
 	private Date birthdate;
 	private String country;
@@ -31,7 +31,7 @@ public class Utilisateur implements Serializable{
 	@Column(nullable=true)
 	private String gender;
 
-	public Long getIduser() {
+	public int getIduser() {
 		return iduser;
 	}
 
@@ -39,7 +39,7 @@ public class Utilisateur implements Serializable{
 		super();
 	}
 
-	public void setIduser(Long iduser) {
+	public void setIduser(int iduser) {
 		this.iduser = iduser;
 	}
 
