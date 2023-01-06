@@ -2,6 +2,7 @@ package com.user.userapi.service.implementation;
 
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,9 +26,9 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	@Override
-	public Utilisateur findById(int iduser) {
+	public Utilisateur findById(int iduser) throws NoSuchElementException{
 		return userRepo.findById(iduser).get();
-		//return null;
+		
 	}
 	
 	

@@ -106,53 +106,5 @@ public class UserConf {
 		
 	}*/
 	
-	//@Autowired
-/*	private Environment env;
-	
-@Bean("datasource")
-//@ConfigurationProperties(prefix = "spring.datasource")
-public DataSource h2ds() {
-	 DriverManagerDataSource dataSource
-     = new DriverManagerDataSource();
-   dataSource.setDriverClassName(
-     env.getProperty("spring.datasource.driver-class-name"));
-   dataSource.setUrl(env.getProperty("spring.datasource.url"));
-   dataSource.setUsername(env.getProperty("spring.datasource.username"));
-   dataSource.setPassword(env.getProperty("spring.datasource.password"));
 
-   return dataSource;
-}
-
-@Bean
-public EntityManagerFactoryBuilder entityManagerFactoryBuilder() {
-   return new EntityManagerFactoryBuilder(new HibernateJpaVendorAdapter(), new HashMap<>(), null);
-}
-@SuppressWarnings("unchecked")
-@Bean(name = "h2dbEntityManager")
-public LocalContainerEntityManagerFactoryBean h2dbEntityManagerFactory(EntityManagerFactoryBuilder builder) {  
-	return builder
-			.dataSource(h2ds())
-			.properties(hibernateProperties())
-			.packages("com.user.userapi.model")
-			.persistenceUnit("h2")
-			.build();
-}
-@Bean(name = "h2dbtr")
-public PlatformTransactionManager h2dbTransactionManager(@Qualifier("h2dbEntityManager") EntityManagerFactory entityManagerFactory) {
-	return new JpaTransactionManager(entityManagerFactory);
-}
-@SuppressWarnings("rawtypes")
-private Map hibernateProperties() {
-	Properties properties = new Properties() {
-		private static final long serialVersionUID = 1L;
-		{
-			setProperty("hibernate.hbm2ddl.auto", "create-drop");
-			setProperty("hibernate.show_sql", "true");
-			setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-		}
-	};
-	return properties.entrySet().stream().collect(Collectors.toMap(e -> e.getKey().toString(), e -> e.getValue()));
-}
-
-*/
 }
