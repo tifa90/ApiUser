@@ -19,29 +19,21 @@ public class UserServiceImpl implements UserService{
 	private UserRepository userRepo;
 	
 	
-	@Override //reference a la classe parent qui est l'interface UserService
+	@Override 
 	public List<Utilisateur> findAll(){
-		
-		//List<User> liste = new ArrayList<User>();
-		//userRepo.findAll().forEach(liste::add);
-		//return liste;
-		
 		return userRepo.findAll();
 	}
 	
 	@Override
 	public Utilisateur findById(int iduser) {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepo.findById(iduser).get();
+		//return null;
 	}
 	
 	
 
 	@Override
 	public int register(Utilisateur user) {
-		//System.out.println("######################## "+user.getIduser());
-		//System.out.println("######################## "+user.getUserName());
-		
 		return userRepo.save(user).getIduser();
 	}
 

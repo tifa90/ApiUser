@@ -9,9 +9,12 @@ public interface UserService {
 	
 	public List<Utilisateur> findAll();
 	
+	public int register(Utilisateur user);
+	
 	public Utilisateur findById(int iduser);
 
-	public int register(Utilisateur user);
+	
+
 
 	
 		
