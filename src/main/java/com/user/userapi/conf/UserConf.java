@@ -54,8 +54,6 @@ public class UserConf {
         = new HibernateJpaVendorAdapter();
       em.setJpaVendorAdapter(vendorAdapter);
       HashMap<String, Object> properties = new HashMap<>();
-      //properties.put("spring.jpa.hibernate.ddl-auto",
-        //env.getProperty("spring.jpa.hibernate.ddl-auto", "update"));
       properties.put("hibernate.hbm2ddl.auto", "update");
       properties.put("spring.jpa.show-sql",
     	        env.getProperty("spring.jpa.show-sql", "true"));
@@ -96,7 +94,7 @@ public class UserConf {
 		
 	}
 	
-	/*@EventListener
+	@EventListener
 	private void onApplication(ContextRefreshedEvent event) throws IOException{
 		ResourceDatabasePopulator dataPopulator = new ResourceDatabasePopulator(new ClassPathResource("insert.sql"));
 		dataPopulator.setContinueOnError(true);
@@ -104,7 +102,7 @@ public class UserConf {
 		
 		
 		
-	}*/
+	}
 	
 
 }
